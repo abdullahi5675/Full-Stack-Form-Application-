@@ -1,0 +1,180 @@
+/* Reset and Base Styles */
+* { /* Universal selector to apply styles to all elements */
+    margin: 0;  /* Remove ALL outside spacing in HTML elements */
+    padding: 0; /* Remove ALL inside spacing in HTML elements */
+    box-sizing: border-box; /* Include padding and border in element's total 'width' and height */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* creates a color blend from blue to purple */
+    min-height: 100vh; /* Ensure body takes full viewport height (vh = viewport height) */
+    padding: 20px; /* Space around content or edges */
+    color: #333; /* Default text color */
+}
+
+.container { /* Main content container */
+    max-width: 800px; /* the width of the container will not exceed 800px */
+    margin: 0 auto;  /* Center the container horizontally */
+    background: white; /* White background for content area */
+    border-radius: 15px;  /* Rounded corners for the container */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); /* creates a subtle shadow effect */
+    overflow: hidden; /* Ensures child elements don't overflow the rounded corners */
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* create a dark blue gradient */
+    color: white; /*makes all text color white in the header */
+    padding: 30px; /* this add a space inside the header */
+    text-align: center; /* centers all text inside the header */
+}
+
+header h1 {
+    font-size: 2.5rem; /* makes the font size 2.5* bigger than the normal text (rem = relative to root) */
+    margin-bottom: 10px; /* adds space below the h1 (px = the size is fixed) */
+    font-weight: 300; /* makes the font weight lighter (not bold) */
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Main Content */
+main {
+    padding: 40px; /* adds space inside the main content area */
+}
+
+/* Form Section */
+.form-section {
+    margin-bottom: 40px; /* adds 40px space below the form section */
+}
+
+.form-section h2 {
+    color: #2c3e50;  /* dark blue color for the heading */
+    margin-bottom: 25px;  /* adds space below the h2 */
+    font-size: 1.8rem;  /* makes the font size 1.8* bigger than normal text (rem = relative to root) */
+    border-bottom: 2px solid #3498db; /* adds a blue line below or under the heading */
+    padding-bottom: 10px;  /* adds space below the heading text */
+}
+
+.form-group {
+    margin-bottom: 20px;  /* adds space below each form group (name, email, etc.) */
+}
+
+label { /* label represents the text that describes each input field */
+    display: block; /* makes the label take up the full width (appears above input|) */ 
+    margin-bottom: 8px;  /* adds space below the label */
+    font-weight: 600;  /* makes the label text bolder */
+    color: #2c3e50; /* dark blue color for labels */
+}
+
+/* This is where user interact with the form */
+input[type="text"], 
+input[type="email"] { 
+    width: 100%; /* This makes input fields stretch to full width of the container */
+    padding: 12px 15px;  /* 12px (Top/bottom spacing), 15px (Left/right spacing) */
+    border: 2px solid #ddd; /* Border thickness (2px) and light gray color (#ddd) */
+    border-radius: 8px;  /* Rounded corners for input fields */
+    font-size: 16px;
+    transition: all 0.3s ease; /* Smooth transition for focus effects */
+}
+
+/* Input Focus Effect when user clicks an input field */
+input[type="text"]:focus, 
+input[type="email"]:focus {
+    outline: none; /* Remove default browsers outline */
+    border-color: #3498db; /* Change border color to blue on focus from light gray  */
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Submit Button */
+.submit-btn { 
+    background: linear-gradient(135deg, #3498db, #2980b9); /*Creates a blue gradient from light blue to dark blue */
+    color: white; /* makes buttons text color white  */
+    border: none;  /* removes default border */
+    padding: 15px 30px;  /* 15px (Top/bottom spacing), 30px (Left/right spacing) */
+    font-size: 18px;  /* makes the font size 18px */ 
+    border-radius: 8px; /* Rounded corners for the button */
+    cursor: pointer; /* changes mouse cursor to hand symbol */
+    transition: all 0.3s ease; /* Animate any changes over 0.3 seconds */
+    width: 100%;  /* makes the button stretch to full width of the container */
+    font-weight: 600; /* makes the button text semi-bolder to show that this is an important action */
+}
+
+/* what happen when user hover or trying to click the button */
+.submit-btn:hover { 
+    transform: translateY(-2px); /* moves the button up by 2px */
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4); /* adds a shadow effect below the button */
+}
+
+/* what happen when user click the button */
+.submit-btn:active {
+    transform: translateY(0); /* returns the button to its original position */
+    box-shadow: none; /* removes the shadow effect */
+}
+
+/* Response Section */
+.response-section h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #27ae60;
+    padding-bottom: 10px;
+}
+
+.response-box {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 25px;
+    min-height: 150px;
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.placeholder {
+    color: #6c757d;
+    font-style: italic;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Success State */
+.response-box.success {
+    border-color: #27ae60;
+    background: #d5f4e6;
+}
+
+/* Error State */
+.response-box.error {
+    border-color: #e74c3c;
+    background: #fadbd8;
+}
+
+/* Footer */
+footer {
+    background: #34485cff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+        border-radius: 10px;
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+}

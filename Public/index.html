@@ -1,0 +1,64 @@
+<!DOCTYPE html> <!-- Tells browser "This is an HTML5 document" -->
+<html lang="en"> <!-- Declares "This page is in English" -->
+<head> <!-- Contains page setup instructions (not visible to users) -->
+    <meta charset="UTF-8"> <!-- Ensures proper text display (supports Arabic, English, emojis) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- this makes it looks good even on phone or tab -->
+    <title>Fullstack Application - Abdullahi</title> <!-- this is the title of the page and the Text shown in browser tab -->
+    <link rel="stylesheet" href="style.css"> <!-- The link that connects to the css file for styling -->
+</head>
+
+<body> <!-- contains Everything users actually SEE -->
+    <div class="container"> <!-- div is a section or a container and class is used for css styling -->
+        <header> <!-- this is the header section -->
+            <h1>🚀 Fullstack Application</h1>
+            <p>Connect Frontend to Backend API</p>
+        </header>
+
+        <main> <!-- main content of the page -->
+            <!-- Form Section -->
+            <section class="form-section"> <!-- section groups related content together and class is for css styling -->
+                <h2>Submit Your Information</h2>
+                <form id="userForm"> <!-- form creates a data collection area and id is used to identify the form in javascript -->
+                    <div class="form-group"> <!-- this is a container for each input field and its label -->
+                        <label for="name">Full Name:</label> <!-- label describes the input field and 'for' links the label to the input field (id="name") -->
+                        <input type="text" id="name" name="name" required
+                               placeholder="Enter your full name">
+                               <!-- (input = creates a typing field), (type="text"= accepts any text), (required = must be filled out before submitting), (placeholder = shows example text inside the field) -->
+                               <!-- name="name" this becomes req.body.name in the backend. -->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required
+                               placeholder="Enter your email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="task">Task Description:</label>
+                        <input type="text" id="task" name="task" required
+                               placeholder="Describe your task">
+                    </div>
+
+                    <button type="submit" class="submit-btn"> <!-- button is a clickable element to submit the form and type="submit" a special type to submit the form. -->
+                        📨 Send to API
+                    </button>
+                </form>
+            </section>
+
+            <!-- Response Section -->
+            <section class="response-section"> <!-- section for displaying API response -->
+                <h2>API Response</h2>
+                <div id="response" class="response-box"> <!-- a container to show the response from the API and id="response" to identify it in javascript -->
+                    <p class="placeholder">Submit the form to see API response here...</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Built by Abdullahi H Nayaya | Fullstack Development</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script> <!-- link to the javascript file that handles form submission and API interaction -->
+</body>
+</html>
